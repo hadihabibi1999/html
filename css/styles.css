@@ -1,0 +1,113 @@
+:root {
+  --color-primary: #16e7fc;
+  --color-secondry: #16c4fc;
+  --color-accent: #fe8038;
+  --color-body: #b8b6b6;
+  --color-heading: #2c66ff;
+  --color-white: rgb(226, 224, 224);
+  --color-black: rgba(59, 59, 59, 0.746);
+  --color-darker: rgba(41, 40, 40, 0.746);
+  --color-darkest: rgba(0, 0, 0, 0.746);
+}
+html {
+  font-size: 62.5%; /*10px*/
+}
+body {
+  font-size: 1.6rem;
+  color: var(--color-body);
+  font-family: "Audiowide", cursive;
+}
+a {
+  text-decoration: none;
+  color: var(--color-darker);
+  font-weight: bold;
+}
+/* Icons */
+.icon-large {
+  font-size: 3.5rem;
+}
+.icon-primary {
+  color: var(--color-body);
+}
+/* collapsible */
+.collapsible__content {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.collapsible--expanded .collapsible__content {
+  max-height: 100vh;
+  opacity: 1;
+}
+
+/* navmigation bar */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  background: rgb(10, 0, 1);
+  flex-wrap: wrap;
+  align-items: center;
+  background: linear-gradient(
+    286deg,
+    rgba(10, 0, 1, 1) 10%,
+    rgba(109, 102, 103, 1) 55%,
+    rgba(170, 164, 165, 1) 77%,
+    rgba(253, 252, 254, 1) 92%
+  );
+}
+.nav__items {
+  list-style-type: none;
+  width: 100%;
+  margin: 0;
+  padding-left: 2rem;
+}
+.nav__item {
+  margin: 2rem 0 1.5rem;
+  padding-bottom: 0.5rem;
+  color: var(--color-black);
+  border-bottom: 1px solid rgba(110, 110, 110, 0.123);
+}
+.nav__item a:hover {
+  color: var(--color-darkest);
+}
+.nav i {
+  margin-right: 1.6rem;
+  padding: 0.5rem;
+  opacity: 0.5;
+  border: 2px solid rgb(138, 136, 136);
+  border-radius: 6px;
+  transition: box-shadow 0.15s;
+}
+.nav.collapsible--expanded i {
+  opacity: 1;
+  box-shadow: 0 0 0 1.5px rgb(150, 149, 148);
+}
+.nav.collapsible--expanded .nav__items {
+  font-size: 2rem;
+}
+@media screen and (min-width: 769px) {
+  .nav i {
+    display: none;
+  }
+  .nav__items {
+    width: auto;
+    display:flex;
+    padding: 0;
+    max-height: 100%;
+    opacity: 1;
+  }
+  .nav__item {
+    margin-right: 5rem;
+    color: var(--color-white);
+    border: 0;
+    padding: 1rem 0 1rem 3.5rem;
+  }
+  a {
+    color: var(--color-white);
+    font-size: 20px;
+  }
+  .nav__item a:hover {
+    color: #fff;
+  }
+}
