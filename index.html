@@ -4,13 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>my web app</title>
+    <title>js.learning</title>
     <link rel="stylesheet" href="/css/normalize.css" />
     <link rel="stylesheet" href="/css/styles.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap"
       rel="stylesheet"
@@ -21,8 +22,166 @@
     ></script>
   </head>
   <body>
-    <div style="width: 30%; margin: 5rem">
-     
+    <nav class="nav collapsible">
+      <a href="/"><img class="nav__logo" src="/images/logo.jpeg" alt="" /></a>
+      <span class="icon-primary icon-large"
+        ><i class="fas fa-bars icon-large"></i
+      ></span>
+      <ul class="nav__items collapsible__content">
+        <li class="nav__item"><a href="index.html">Home</a></li>
+        <li class="nav__item"><a href="#about-courses">About Courses</a></li>
+        <li class="nav__item"><a href="#online-courses">online courses</a></li>
+        <li class="nav__item"><a href="#contact">Contact Me</a></li>
+      </ul>
+    </nav>
+
+    <article class="title">
+      <img data-aos='fade-left' class="title__image" src="/images/back.jpeg" alt="" />
+      <div data-aos='fade-down' class="title__content">
+        <h1>what is the purpose of this page?</h1>
+        <h2>
+          this page follows these steps:
+          <ul>
+            <li>showing my expeirence in HTML & CSS</li>
+            <li>
+              giving you deep understanding of what is going on the websites and
+              server
+            </li>
+            <li>
+              included some courses to learn fundamentals and basic webpages
+            </li>
+            <li>codding with tricks and debugging the html:5 & boostrap</li>
+          </ul>
+        </h2>
+      </div>
+    </article>
+
+    <blockquote data-aos="flip-down">
+      <h2 id="about-courses" class="quote__heading">About Courses :</h2>
+      <p>
+        hi, I'm Hadi (full-stack developer & debugger) and I've been learning JS
+        itself and its libraries and frameworks, like: the popular ones are
+        React & react-native witch are used mostly , I combined my experiences
+        into these courses all of them together . my comprehensive courses help
+        you do your best at short time. JavaScript is a powerful programming
+        language, you should learn it first by the html and css ; for my persian
+        friend , I have farsi translated teaching in courses
+      </p>
+      <a href="#online-courses" class="link-arrow">check out courses</a>
+    </blockquote>
+
+    <div id="online-courses" class="cards">
+      <div data-aos="zoom-out-left" class="card card--primary">
+        <header class="card__header">
+          <span class="header__title">Entry</span>
+          <span class="header__pricing">$9</span>
+          <span class="header__billing-cycle">/months</span>
+          <span class="badge badge--primary">10% off </span>
+          <span class="header__description">html fundamentals</span>
+        </header>
+        <div class="card__body">
+          <ul class="list">
+            <li class="list__item">
+              <i class="fas fa-check"></i>
+              <p class="list__item-text">sementic elemens&selectors</p>
+            </li>
+            <li class="list__item">
+              <i class="fas fa-check"></i>
+              <p class="list__item-text">entities,formats,containers</p>
+            </li>
+            <li class="list__item">
+              <i class="fas fa-check"></i>
+              <p class="list__item-text">images and videos </p>
+            </li>
+            <li class="list__item">
+              <i class="fas fa-check"></i>
+              <p class="list__item-text">psudo elements</p>
+            </li>
+          </ul>
+          <a href="#contact" class="btn btn--outline">buy now</a>
+        </div>
+      </div>
+      <div data-aos="zoom-out" class="card card--secondary card--popular">
+        <header class="card__header">
+          <span class="header__title">Entry</span>
+          <span class="header__pricing">$39</span>
+          <span class="header__billing-cycle">/months</span>
+          <span class="badge badge--primary">10% off </span>
+          <span class="header__description"
+            >css fundamentals + advance css</span
+          >
+        </header>
+        <div class="card__body">
+          <ul class="list">
+            <li class="list__item">
+              <i class="fas fa-check"></i>
+              <p class="list__item-text">media query</p>
+            </li>
+            <li class="list__item">
+              <i class="fas fa-check"></i>
+              <p class="list__item-text">animations</p>
+            </li>
+            <li class="list__item">
+              <i class="fas fa-check"></i>
+              <p class="list__item-text">blocks</p>
+            </li>
+            <li class="list__item">
+              <i class="fas fa-check"></i>
+              <p class="list__item-text">building for productions</p>
+            </li>
+          </ul>
+          <a href="#contact"  class="btn btn--outline">buy now</a>
+        </div>
+      </div>
+      <div data-aos="zoom-out-right" class="card card--primary">
+        <header class="card__header">
+          <span class="header__title">Entry</span>
+          <span class="header__pricing">$19</span>
+          <span class="header__billing-cycle">/months</span>
+          <span class="badge badge--primary">10% off </span>
+          <span class="header__description">css fundamentals</span>
+        </header>
+        <div class="card__body">
+          <ul class="list">
+            <li class="list__item">
+              <i class="fas fa-check"></i>
+              <p class="list__item-text">layouts(flex,grid,...),typography</p>
+            </li>
+            <li class="list__item">
+              <i class="fas fa-check"></i>
+              <p class="list__item-text">images resolution switching,forms</p>
+            </li>
+            <li class="list__item">
+              <i class="fas fa-check"></i>
+              <p class="list__item-text">transformation,transition</p>
+            </li>
+            <li class="list__item">
+              <i class="fas fa-check"></i>
+              <p class="list__item-text">maintable css</p>
+            </li>
+          </ul>
+          <a href="#contact"  class="btn btn--outline">buy now</a href="#contact" >
+        </div>
+      </div>
     </div>
+
+    <div data-aos="fade-down"
+    data-aos-easing="linear"
+    data-aos-duration="1500" id="contact" class="contact">
+      <div class="contact__ankers">
+        <a target="_blank" href="https://instagram.com/hadi_cyb.h?r=nametag"><i class="fa fa-instagram"></i> Instagram </a
+        ><a target="_blank" href="https://telegram.me/ha3i3i"> <i class="fa fa-telegram"></i> Telegram</a
+        ><a href="mailto:hadicyb.js@gmail.com"> <i class="fa fa-envelope"></i> Email</a>
+      </div>
+    </div>
+
+    <footer>
+      <p  class="footer">CopyRight &copy; <em> hadi_cyb</em></p>
+    </footer>
+    <script src="/main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
